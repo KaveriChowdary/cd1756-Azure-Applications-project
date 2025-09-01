@@ -2,21 +2,19 @@
 This script runs the FlaskWebProject application using a development server.
 """
 
-'''from os import environ
 from FlaskWebProject import app
+import os
 
-if __name__ == '__main__':
-    HOST = environ.get('SERVER_HOST', 'localhost')
-    try:
-        PORT = int(environ.get('SERVER_PORT', '5555'))
-    except ValueError:
-        PORT = 5555
-    app.run(HOST, PORT, ssl_context='adhoc')'''
+if __name__ == "__main__":
+    host = "0.0.0.0"                     # Make the app accessible externally
+    port = int(os.environ.get("PORT", 8000))  # Use Azure's assigned port or 8000
+    app.run(host=host, port=port)
+
 """
 This script runs the FlaskWebProject application using a development server.
 """
 
-import os
+''''import os
 from FlaskWebProject import app
 
 if __name__ == '__main__':
@@ -28,4 +26,4 @@ if __name__ == '__main__':
         PORT = 80
 
     # Run the Flask app
-    app.run(host=HOST, port=PORT)
+    app.run(host=HOST, port=PORT)''''
