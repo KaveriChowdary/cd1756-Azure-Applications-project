@@ -1,8 +1,8 @@
 # Core Flask stack
-Flask>=2.3.0
-Flask-Login>=0.6.2
-Flask-Session>=0.5.0
-Flask-SQLAlchemy>=3.0.0
+Flask==3.1.2
+Flask-Login==0.6.3
+Flask-Session==0.8.0
+Flask-SQLAlchemy==3.1.1
 Flask-WTF==1.1.1
 WTForms==3.0.1
 
@@ -10,24 +10,19 @@ WTForms==3.0.1
 SQLAlchemy==2.0.20
 alembic==1.10.2
 python-editor==1.0.4
-pyodbc>=5.2.0
+pyodbc==5.2.0
 
-# Azure & Cloud (updated)
+# Azure & Cloud
 azure-common==1.1.28
 azure-nspkg==3.0.2
-# Replace deprecated azure-storage
-azure-storage-blob>=12.20.0   # for blob storage
-# If you use file share or queue storage, add:
-# azure-storage-file-share>=12.13.0
-# azure-storage-queue>=12.14.0
-
+azure-storage-blob==12.26.0
 msal==1.22.0
 
 # Networking / HTTP
 requests==2.31.0
 urllib3==2.0.4
 idna==3.5
-certifi==2025.9.1
+certifi==2025.8.3
 chardet==5.2.0
 
 # Security & Encryption
