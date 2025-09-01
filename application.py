@@ -16,11 +16,16 @@ if __name__ == '__main__':
 This script runs the FlaskWebProject application using a development server.
 """
 
-from os import environ
+import os
 from FlaskWebProject import app
 
 if __name__ == '__main__':
-    # Azure sets the PORT environment variable dynamically
-    port = int(environ.get("PORT", 80))  # default to 80 if PORT not set
-    app.run(host="0.0.0.0", port=port)   # listen on all network interfaces
+    # Use Azure's assigned PORT, default to 80 if not set
+    HOST = '0.0.0.0'
+    try:
+        PORT = int(os.environ.get('PORT', 80))
+    except ValueError:
+        PORT = 80
 
+    # Run the Flask app
+    app.run(host=HOST, port=PORT)
