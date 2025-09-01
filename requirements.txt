@@ -41,3 +41,6 @@ six==1.16.0
 cachelib==0.13.0
 PyJWT==2.10.1
 typing-extensions==4.15.0
+
+Werkzeug==2.2.3
+
