@@ -12,10 +12,15 @@ alembic==1.10.2
 python-editor==1.0.4
 pyodbc>=5.2.0
 
-# Azure & Cloud
+# Azure & Cloud (updated)
 azure-common==1.1.28
 azure-nspkg==3.0.2
-azure-storage==0.37.0
+# Replace deprecated azure-storage
+azure-storage-blob>=12.20.0   # for blob storage
+# If you use file share or queue storage, add:
+# azure-storage-file-share>=12.13.0
+# azure-storage-queue>=12.14.0
+
 msal==1.22.0
 
 # Networking / HTTP
