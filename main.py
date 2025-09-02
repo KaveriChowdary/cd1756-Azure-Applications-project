@@ -6,9 +6,8 @@ from FlaskWebProject import app
 import os
 
 if __name__ == "__main__":
-    host = "0.0.0.0"                     # Make the app accessible externally
-    port = int(os.environ.get("PORT", 8000))  # Use Azure's assigned port or 8000
-    app.run(host=host, port=port)
+    app.run(host="0.0.0.0", port=5000, debug=True)  # Change 5000 to your preferred port
+
 
 """
 This script runs the FlaskWebProject application using a development server.
